@@ -1,110 +1,126 @@
 
 package ToDOList;
-import javax.swing.*;
+
+import javax.swing.JOptionPane;
 import java.util.ArrayList;
 
 public class Main {
 
-    public static void addTasks()
-    {
-        TaskDetail task = new TaskDetail("","","",new Project("raja"));
+    public static void addTaskData(Task task, Project project, Menu menu) {
+
         String title;
         String dueDate;
         String status;
         String input;
-        Project project = new Project("raja");
 
-        title = JOptionPane.showInputDialog("Please enter title of the task :");
+        menu.setTaskNameText("Please enter title of the task: ");
+        menu.setTaskDueDateText("Please enter the due-date of the task: ");
+        menu.setTaskStatusText("Please enter the status of the task: ");
+        menu.setTaskProjectText("Please enter the project name this task belong to");
+
+
+        title = JOptionPane.showInputDialog(menu.getTaskNameText());
         task.setTitle(title);
-        dueDate = JOptionPane.showInputDialog("Please enter due date of the task :");
+        dueDate = JOptionPane.showInputDialog(menu.getTaskDueDateText());
         task.setDueDate(dueDate);
-        status = JOptionPane.showInputDialog("Please enter status of the task :");
+        status = JOptionPane.showInputDialog(menu.getTaskStatusText());
         task.setStatus(status);
-        input = JOptionPane.showInputDialog("Please enter project related to the task :");
+        input = JOptionPane.showInputDialog(menu.getTaskProjectText());
         project.setName(input);
-
-        TaskList taskList = new TaskList();
-
-        ArrayList<TaskDetail> tasks = new ArrayList<>();
-        tasks.add(new TaskDetail(task.getTitle(), task.getDueDate(),task.getStatus(),new Project(project.getName())));
-        taskList.setTaskList(tasks);
-    }
-
-
-    public static void showTasks()
-    {
-        TaskList taskList = new TaskList();
-        JOptionPane.showMessageDialog(null,"task Name: "+);
-    }
-
-    public static void editTasks()
-    {
+        System.exit(0);
 
     }
 
+    public static void showTasks(ArrayList<Task> tasks) {
+        if (tasks.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "There is no task");
+        } else {
+            for (Task taskList : tasks) {
+                JOptionPane.showMessageDialog(null, taskList.getTitle() +
+                        "\n" + taskList.getDueDate() +
+                        "\n" + taskList.getStatus() +
+                        "\n" + taskList.getProject().getName());
+            }
+        }
+        System.exit(0);
+    }
+
+    public static void editTasks() {
+
+        public void updateTask(){
+            System.out.println();
+        }
+
+        public void removeTask(){
+            System.out.println();
+        }
+
+        public void statusChangeTask(){
+            System.out.println();
+        }
 
 
-    public static void main(String[] args)
-    {
+
+
+    }
+
+
+    public static void main(String[] args) {
         String input;
-
-
         int choice;
 
-        JOptionPane.showMessageDialog(null,"Welcome to the ToDOList");
-        JOptionPane.showMessageDialog(null,"You have X tasks todo and Y tasks are done!");
-        input = JOptionPane.showInputDialog("Pick an option:" );
+        Menu menu = new Menu();
+        menu.setWelcomeText("Welcome to the ToDo app");
+        menu.setMainMenuOptionsText("Please pick one of the following Options");
 
-        JOptionPane.showMessageDialog(null,"(1) Show Task List (by date or project)");
-        JOptionPane.showMessageDialog(null,"(2) Add New Task");
-        JOptionPane.showMessageDialog(null,"(3) Edit Task (update, mark as done, remove)");
-        JOptionPane.showMessageDialog(null,"(4) Save and Quit");
+        menu.setTaskMenuShowText("(1) Show Task List (by date or project)");
+        menu.setTaskMenuAddText("(2) Add New Task");
+        menu.setTaskMenuEditText("(3) Edit Task (update, mark as done, remove)");
+        menu.setTaskMenuSaveExitText("(4) Save and Quit");
+
+        input = JOptionPane.showInputDialog(menu.getWelcomeText() +
+                "\n" + "You have " + 0 + " tasks todo and " + 0 + " tasks are done!" +
+                "\n" + menu.getMainMenuOptionsText() +
+
+                "\n\n" + menu.getMainMenuOptionsText() +
+                "\n" + menu.getTaskMenuAddText() +
+                "\n" + menu.getTaskMenuEditText() +
+                "\n" + menu.getTaskMenuSaveExitText());
 
         choice = Integer.parseInt(input);
 
-
-      switch (choice)
-      {
-          case 1:
-              System.out.println("show added task ");
-              break;
-
-          case 2:
-              do
-                  {
-                      addTasks();
-                      input = JOptionPane.showInputDialog("want to add more put yes" );
-                  }while(input.equals("yes");
-
-              break;
-
-          case 3:
-              do
-                  {
-                      editTasks();
-                      input = JOptionPane.showInputDialog("want to Edit more put yes" );
-
-                  }while(input.equals("yes");
-              break;
-
-          case 4:
-              System.out.println("Saved and Quited");
-              break;
-      }
+        Task task = new Task();
+        Project project = new Project();
+        ArrayList<Task> tasks = new ArrayList<>();
 
 
+        switch (choice) {
+            case 1:
+                showTasks(tasks);
+                break;
 
+            case 2:
+                do {
+                    addTaskData(task, project, menu);
+                    tasks.add(new Task(task.getTitle(), task.getDueDate(), task.getStatus(), new Project(project.getName())));
 
+                    input = JOptionPane.showInputDialog("want to add more put yes");
+                } while (input.equals("yes"));
+                break;
 
+            case 3:
+                do {
+                    editTasks();
+                    input = JOptionPane.showInputDialog("want to Edit more put yes");
 
+                } while (input.equals("yes"));
+                break;
 
-
-
-
-
-        //input = JOptionPane.showInputDialog("please enter number of packages :");
-
-
+            case 4:
+                System.out.println("Saved and Quited");
+                break;
+        }
+        System.exit(0);
 
     }
 }
