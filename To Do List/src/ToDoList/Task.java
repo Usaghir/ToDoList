@@ -1,6 +1,11 @@
-package ToDOList;
-import javax.swing.JOptionPane;
-import java.util.ArrayList;
+/*======================================================================================================================
+ File Name   : Task.java
+ Author      : @author Raja Umer Saghir
+ Description : Task Class which is used to create the To Do list Tasks.
+======================================================================================================================*/
+
+//Package declaration which containing all the files regarding the ToDO List App.
+package ToDoList;
 
 public class Task
 {
@@ -33,17 +38,14 @@ public class Task
     {
         this.title = title;
     }
-
     public void setDueDate(String dueDate)
     {
         this.dueDate = dueDate;
     }
-
     public void setStatus(String status)
     {
         this.status = status;
     }
-
     public void setProject(Project project)
     {
         this.project = project;
@@ -52,18 +54,17 @@ public class Task
     public String getTitle() {
         return title;
     }
-
     public String getDueDate() {
         return dueDate;
     }
-
     public String getStatus() {
         return status;
     }
-
     public Project getProject() {
         return project;
     }
+
+
 
 
 }
