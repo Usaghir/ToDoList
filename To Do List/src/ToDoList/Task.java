@@ -9,13 +9,22 @@ package ToDoList;
 
 public class Task
 {
-
+    // For title of the Task.
     String title;
+
+    // For due date of the Task.
     String dueDate;
+
+    // For status of the Task.
     String status;
+
+    // For project of the Task.
     Project project;
 
 
+    /**
+     * This constructor initializes the title, due date, status, and project object.
+     */
     public Task()
     {
 
@@ -25,6 +34,13 @@ public class Task
         this.project = new Project();
     }
 
+    /**
+     * This constructor initializes the title, due date, status, and project object via the parameters.
+     * @param title The title of the Task
+     * @param dueDate The dueDate of the Task
+     * @param status The status of the Task
+     * @param project The project related of the Task
+     */
     public Task(String title, String dueDate, String status, Project project)
     {
 
@@ -34,32 +50,66 @@ public class Task
         this.project = project;
     }
 
+    /**
+     * @param title to set the title of the Task.
+     */
     public void setTitle(String title)
     {
         this.title = title;
     }
+
+    /**
+     * @param dueDate to set the due Date of the Task.
+     */
     public void setDueDate(String dueDate)
     {
         this.dueDate = dueDate;
     }
+
+    /**
+     * @param status to set the status of the Task.
+     */
     public void setStatus(String status)
     {
         this.status = status;
     }
+
+    /**
+     * @param project to set the project of the Task.
+     */
     public void setProject(Project project)
     {
         this.project = project;
     }
 
+    /**
+     * This getTitle method returns the title of the Task.
+     * @return The value in the title field.
+     */
     public String getTitle() {
         return title;
     }
+
+    /**
+     * This getDueDate method returns the dueDate of the Task.
+     * @return The value in the dueDate field.
+     */
     public String getDueDate() {
         return dueDate;
     }
+
+    /**
+     * This getStatus method returns the status of the Task.
+     * @return The value in the status field.
+     */
     public String getStatus() {
         return status;
     }
+
+    /**
+     * This getProject method returns the project of the Task.
+     * @return The value in the project field.
+     */
     public Project getProject() {
         return project;
     }

@@ -9,21 +9,31 @@ package ToDoList;
 
 public class Project {
 
-    String name;
+    String name;                    //For storing the Name of the Project.
 
 
+    // Constructor to initialize the name of the Project with empty String.
     public Project() {
         this.name = "";
     }
 
+    /**
+     * Constructor to initialize the name of the Project with parameter.
+     * @param name the name of the Project.
+     */
     public Project(String name) {
         this.name = name;
     }
 
+    /**
+     * @param name set the name of the project.
+     */
     public void setName(String name) {
         this.name = name;
     }
-
+    /**
+     * @return the value of the name field of the project.
+     */
     public String getName() {
         return name;
     }
