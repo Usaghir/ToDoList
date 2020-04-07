@@ -10,16 +10,16 @@ package ToDoList;
 public class Task
 {
     // For title of the Task.
-    String title;
+    private String title;
 
     // For due date of the Task.
-    String dueDate;
+    private String dueDate;
 
     // For status of the Task.
-    String status;
+    private String status;
 
     // For project of the Task.
-    Project project;
+    private Project project;
 
 
     /**

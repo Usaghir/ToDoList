@@ -9,7 +9,7 @@ package ToDoList;
 
 public class Project {
 
-    String name;                    //For storing the Name of the Project.
+    private String name;                    //For storing the Name of the Project.
 
 
     // Constructor to initialize the name of the Project with empty String.

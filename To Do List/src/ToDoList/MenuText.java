@@ -8,25 +8,27 @@
 package ToDoList;
 
 
+import java.security.PrivateKey;
+
 public class MenuText {
 
     // For welcome text for the fist and main menu.
-    String welcomeText;
+    private String welcomeText;
 
     // For Main menu Options text.
-    String menuOptionsText;
+    private String menuOptionsText;
 
     // For heading text for the task list.
-    String taskListHeadingText;
+    private String taskListHeadingText;
 
     // For Different select option list text.
-    String selectOption1;
-    String selectOption2;
-    String selectOption3;
-    String selectOption4;
-    String selectOption5;
-    String selectOption6;
-    String selectOption7;
+    private String selectOption1;
+    private String selectOption2;
+    private String selectOption3;
+    private String selectOption4;
+    private String selectOption5;
+    private String selectOption6;
+    private String selectOption7;
 
 
     /**
