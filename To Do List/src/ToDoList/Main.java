@@ -59,10 +59,10 @@ public class Main {
         do {
 
             // For setting the main menu  display text with list of options and input from user.
-            menuText.setSelectOption1("(1) Show Task List (by date or project)");
-            menuText.setSelectOption2("(2) Add New Task");
-            menuText.setSelectOption3("(3) Edit Task (update, mark as done, remove)");
-            menuText.setSelectOption4("(4) Save and Quit");
+            menuText.setSelectOption1("(1) Show all the tasks");
+            menuText.setSelectOption2("(2) Add new task");
+            menuText.setSelectOption3("(3) Edit task");
+            menuText.setSelectOption4("(4) Save and quit");
 
             input = JOptionPane.showInputDialog(null, menuText.getWelcomeText() +
                     "\n\n" + "You have total " + totalTasks + " tasks in your todo List" +

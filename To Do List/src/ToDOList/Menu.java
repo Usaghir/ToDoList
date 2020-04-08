@@ -155,7 +155,7 @@ public class Menu {
         int taskSelectChoice;
 
         // For User to Choose which task want to edit.
-        menuText.setSelectOption4("Which Task you want to edit Choose between " + 1 + " and " + (tasksList.size() - 1));
+        menuText.setSelectOption4("Which Task you want to edit Choose between " + 1 + " and " + (tasksList.size()));
 
         // Fro Task selecting menu.
         input = JOptionPane.showInputDialog(null, menuText.getSelectOption4(), "Task selecting Menu", JOptionPane.INFORMATION_MESSAGE);
@@ -169,7 +169,7 @@ public class Menu {
         }
 
         // For setting the Task editing choices text.
-        menuText.setSelectOption1("(1) For editing title of the Task");
+        menuText.setSelectOption1("(1) For editing title of the Task: ");
         menuText.setSelectOption2("(2) For editing the due-date of the task:");
         menuText.setSelectOption3("(3) For editing the status of the task:)");
         menuText.setSelectOption4("(4) For editing the project name this task belong to");
@@ -206,9 +206,9 @@ public class Menu {
             case 1:
 
                 // For displaying the current title and user input for new title.
-                menuText.setSelectOption2("Current title of this Task is: ");
-                menuText.setSelectOption2("Please enter the new title for the Task: ");
-                input = JOptionPane.showInputDialog(menuText.getSelectOption1() + tasksList.get(taskSelectChoice).getTitle() + "\n" + menuText.getSelectOption2());
+                menuText.setSelectOption6("Current title of this Task is: ");
+                menuText.setSelectOption7("Please enter the new title for the Task: ");
+                input = JOptionPane.showInputDialog(menuText.getSelectOption6() + tasksList.get(taskSelectChoice).getTitle() + "\n" + menuText.getSelectOption7());
                 tasksList.get(taskSelectChoice).setTitle(input);
                 break;
 
@@ -216,9 +216,9 @@ public class Menu {
 //                do {
 
                 // For displaying the due date and user input for new due date.
-                menuText.setSelectOption2("Current due date of the Task is: ");
-                menuText.setSelectOption2("Please enter the new due date for the Task: ");
-                input = JOptionPane.showInputDialog(menuText.getSelectOption2() + tasksList.get(taskSelectChoice).getDueDate() + "\n" + menuText.getSelectOption2());
+                menuText.setSelectOption6("Current due date of the Task is: ");
+                menuText.setSelectOption7("Please enter the new due date for the Task: ");
+                input = JOptionPane.showInputDialog(menuText.getSelectOption6() + tasksList.get(taskSelectChoice).getDueDate() + "\n" + menuText.getSelectOption7());
                 tasksList.get(taskSelectChoice).setDueDate(input);
 
                    /* input = JOptionPane.showInputDialog(menu.getAddMoreTaskText());
@@ -230,10 +230,10 @@ public class Menu {
 //                do {
 
                 // For displaying the current status and user input for new status.
-                menuText.setSelectOption2("Current status of the Task is: ");
-                menuText.setSelectOption2("Please enter the new status for the Task: ");
+                menuText.setSelectOption6("Current status of the Task is: ");
+                menuText.setSelectOption7("Please enter the new status for the Task: ");
 
-                input = JOptionPane.showInputDialog(menuText.getSelectOption2() + tasksList.get(taskSelectChoice).getStatus() + "\n" + menuText.getSelectOption2());
+                input = JOptionPane.showInputDialog(menuText.getSelectOption6() + tasksList.get(taskSelectChoice).getStatus() + "\n" + menuText.getSelectOption7());
                 tasksList.get(taskSelectChoice).setStatus(input);
                     /*input = JOptionPane.showInputDialog(menu.getEditMoreTaskText());
 
@@ -244,10 +244,10 @@ public class Menu {
 //                do {
 
                 // For displaying the current Project and user input for new Project detail.
-                menuText.setSelectOption2("The project name of the Task is: ");
-                menuText.setSelectOption2("Please enter the new project name for the Task: ");
+                menuText.setSelectOption6("The project name of the Task is: ");
+                menuText.setSelectOption7("Please enter the new project name for the Task: ");
 
-                input = JOptionPane.showInputDialog(menuText.getSelectOption2() + tasksList.get(taskSelectChoice).getProject().getName() + "\n" + menuText.getSelectOption2());
+                input = JOptionPane.showInputDialog(menuText.getSelectOption6() + tasksList.get(taskSelectChoice).getProject().getName() + "\n" + menuText.getSelectOption7());
                 tasksList.get(taskSelectChoice).getProject().setName(input);
                     /*input = JOptionPane.showInputDialog(menu.getEditMoreTaskText());
 
