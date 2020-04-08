@@ -18,28 +18,48 @@ option available as well also will check the validity of the input for some opti
 
 ### Requirement List: 
 
-R1. User see all Display Menu to choose actions for tasks. 
-R2.  User can See count of total tasks. 
-R3:  User can see the all tasks or message if there are not tasks.
-R4:  User can get error message and to choose again in case of selecting the option which don't exist.
-R5:  User can add new Tasks (title, due date, status, Project).
-R6:  User can repeat the add option after adding one task.
-R7:  User can see the the tasks and details after adding.
-R8:  User can Edit the Tasks (title, due date, status, Project). 
-R9:  User can get message when there are no tasks to edit.  
-R10: User can select which tasks to edit. 
-R11: User can get error message while selecting to edit the task number which don't exist. 
-R12: User can repeat the edit option after adding one task. 
-R13: User can Delete the Task.
-R14: User can save the tasks to the file.
-R15: User can quit the program without adding any task.
-R16: User can choose to reopen the main Display before quoting the application.
+1.  User see all Display Menu to choose actions for tasks. 
+2.  User can See count of total tasks. 
+3.  User can see the all tasks or message if there are not tasks.
+4.  User can get error message and to choose again in case of selecting the option which don't exist.
+5.  User can add new Tasks (title, due date, status, Project).
+6.  User can repeat the add option after adding one task.
+7.  User can see the the tasks and details after adding.
+8.  User can Edit the Tasks (title, due date, status, Project). 
+9.  User can get message when there are no tasks to edit.  
+10. User can select which tasks to edit. 
+11. User can get error message while selecting to edit the task number which don't exist. 
+12. User can repeat the edit option after adding one task. 
+13. User can Delete the Task.
+14. User can save the tasks to the file.
+15. User can quit the program without adding any task.
+16. User can choose to reopen the main Display before quoting the application.
 
 ## Class Diagram 
 
        
-          ![Markdown Logo](https://sv.wikipedia.org/wiki/Google_(s%C3%B6kmotor)#/media/Fil:GoogleLogoSept12015.png)
+   ![alt text](ToDoListClassDiagram.png)
+  
 
 
-The interface should look similar to the mockup below:
+## User Interface mockup:
+
+ ![alt text](UserInterFace.png)
+ 
+ 
+ ## User Guide
+ 
+ 1. Start the application using the some IDE or Main Class. 
+ 2. Option will be display choose one of the options from show, add, edit, save and quit). 
+ 3. write 1 for showing the tasks but first time or if there are no tasks will display message that there is no task and will choose display tasks if added before showing.   
+ 4. Write 2 for adding the task (title, due date, status, Project).
+ 5. Write 3 for editing the task (title, due date, status, Project) will ask to add the task in case there is no task to edit. 
+ 6. Write 4 for saving to file and quit the task. (Will still ask user if he want to view display again before quiting).
+ 7. Error messages will be displayed for some options in case of wrong entry while asking to write again.  
+ 8. Repeat Option will be displayed while asking to see some display again. 
+ 
+ 
+ 
+  
+ 
  
