@@ -1,4 +1,4 @@
-# SDA-Personal-Project
+# ToDOList (SDA-Personal-Project)
 
 -----
 
